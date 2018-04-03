@@ -9,10 +9,10 @@ class DishClass:
         return random.randint(0, 60)
     
     def dots(self):
-	      return self.ljust(15, '.')
+	return self.ljust(15, '.')
     
     def to_print(self):
-	      return DishClass.dots(self) + ' ' + str(DishClass.calc_time()) + ' minutes'
+	return DishClass.dots(self) + ' ' + str(DishClass.calc_time()) + 'minutes'
     
 dishes_string = 'steak, pasta, pasta, water, salad, bread, water, red wine, white wine'
 dish_list = []
