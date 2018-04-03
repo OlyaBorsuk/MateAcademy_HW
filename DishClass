@@ -1,0 +1,27 @@
+import random
+
+class DishClass:
+    def __init__(self, name, time):
+        self.dish_list = name
+        self.calc_time = time
+        
+    def calc_time():
+        return random.randint(0, 60)
+    
+    def dots(self):
+	      return self.ljust(15, '.')
+    
+    def to_print(self):
+	      return DishClass.dots(self) + ' ' + str(DishClass.calc_time()) + ' minutes'
+    
+dishes_string = 'steak, pasta, pasta, water, salad, bread, water, red wine, white wine'
+dish_list = []
+
+for dish in dishes_string.split(','):
+    dish_list.append(dish.strip())
+
+unique_dishes = set(dish_list)
+
+for dishes in unique_dishes:
+    if dishes != '':
+        print(DishClass.to_print(unique_dishes))
