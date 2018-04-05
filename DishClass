@@ -1,0 +1,29 @@
+import random
+dishes_string = input('What would you like?(input items should be separated by commas) ')
+#dishes_string = 'steak, pasta, pasta, water, salad, bread, water, red wine, white wine'
+dish_list = []
+
+for dish in dishes_string.title().split(','):
+    dish_list.append(dish.strip())
+
+class DishClass:
+    def __init__(self, name, time):
+        self.dish_list = name
+        self.calc_time = time
+        
+    def calc_time():
+        return random.randint(0, 60)
+    
+    def dots(self):
+        return self.ljust(20, '.')
+    
+    def to_print(self):
+        return (DishClass.dots(self) + ' ' + str(DishClass.calc_time()) + ' minutes')
+    
+  
+
+unique_dishes = set(dish_list)
+
+for dish1 in unique_dishes:
+    if dish1 != '':
+        print(DishClass.to_print(dish1))
